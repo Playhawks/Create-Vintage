@@ -1,0 +1,24 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "3d3f42",
+	"ingredients": [ {
+      "tag": "forge:wires/cast_iron"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:small_cast_iron_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 60,
+  "conditions": [
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/cast_iron"
+      }
+    }
+  ]
+}

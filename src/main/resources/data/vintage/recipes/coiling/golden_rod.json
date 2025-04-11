@@ -1,0 +1,19 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "FAD64A",
+	"ingredients": [ {
+      "tag": "forge:rods/gold"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:golden_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+	"conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/osmium"
+    }
+  ],
+  "results": [
+    {
+      "item": "vintage:osmium_sheet"
+    }
+  ],
+  "conditions": [
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/osmium"
+      }
+    }
+  ]
+}

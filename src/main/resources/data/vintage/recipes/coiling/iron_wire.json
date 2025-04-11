@@ -1,0 +1,19 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "828282",
+	"ingredients": [ {
+      "tag": "forge:wires/iron"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:small_iron_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 60,
+	"conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }]
+}

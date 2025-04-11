@@ -1,0 +1,30 @@
+{
+    "parent": "vintage:iron_spring",
+    "criteria": {
+      "laser": {
+        "conditions": {},
+        "trigger": "vintage:use_laser"
+      }
+    },
+    "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.laser.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:laser"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.laser"
+    }
+  },
+    "requirements": [
+      [
+        "laser"
+      ]
+    ]
+  }

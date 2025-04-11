@@ -1,0 +1,20 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "756a65",
+	"ingredients": [ {
+      "tag": "forge:wires/nethersteel"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:small_nethersteel_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 60,
+	"conditions": [
+	{
+		"type": "forge:mod_loaded",
+		"modid": "createbigcannons"
+    }	]
+}

@@ -1,0 +1,15 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "40374d",
+	"ingredients": [ {
+      "tag": "forge:wires/shadow_steel"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:small_shadow_steel_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 60
+}

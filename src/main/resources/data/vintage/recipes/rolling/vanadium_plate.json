@@ -1,0 +1,17 @@
+{
+  "type":"createaddition:rolling",
+  "input":
+    {
+      "tag": "forge:plates/vanadium"
+    },  
+  "result":
+    {
+      "item": "vintage:vanadium_wire",
+		"count": 2
+    },  
+  "conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }
+  ]
+}

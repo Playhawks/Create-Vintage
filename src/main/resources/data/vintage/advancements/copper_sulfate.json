@@ -1,0 +1,39 @@
+{
+  "parent": "vintage:compressor",
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "vintage:copper_sulfate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.copper_sulfate.desc"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:copper_sulfate"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.copper_sulfate"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

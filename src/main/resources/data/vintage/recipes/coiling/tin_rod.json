@@ -1,0 +1,24 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "d9dee1",
+	"ingredients": [ {
+      "tag": "forge:rods/tin"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:tin_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+  "conditions": [
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/tin"
+      }
+    }
+  ]
+}

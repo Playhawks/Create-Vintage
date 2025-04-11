@@ -1,0 +1,24 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "c3cac1",
+	"ingredients": [ {
+      "tag": "forge:rods/invar"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:invar_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+  "conditions": [
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/invar"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type":"createaddition:rolling",
+  "input":
+    {
+      "tag": "forge:plates/slimesteel"
+    },  
+  "result":
+    {
+      "item": "vintage:slimesteel_wire",
+		"count": 2
+    },  
+	"conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    },
+	{
+		"type": "forge:mod_loaded",
+		"modid": "tconstruct"
+    }	]
+}

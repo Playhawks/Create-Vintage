@@ -1,0 +1,21 @@
+{
+	"type":"vintage:pressurizing",
+	"secondaryFluidOutput": 0,
+	"heatRequirement": "heated",
+	"ingredients": [ 
+		{
+			"fluid": "vintage:sulfur_dioxide",
+			"amount": 250
+		},
+		{
+			"tag": "forge:nuggets/vanadium"
+		}
+	],
+	"results": [
+		{
+			"fluid": "vintage:sulfur_trioxide",
+			"amount": 250
+		}
+	],
+	"processingTime": 400
+}

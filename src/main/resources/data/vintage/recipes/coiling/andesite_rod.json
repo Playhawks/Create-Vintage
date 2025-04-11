@@ -1,0 +1,15 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "a9afa1",
+	"ingredients": [ {
+      "tag": "forge:rods/andesite"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:andesite_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120
+}

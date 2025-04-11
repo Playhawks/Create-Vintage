@@ -1,0 +1,30 @@
+{
+    "parent": "vintage:root",
+    "criteria": {
+      "coiling_machine": {
+        "conditions": {},
+        "trigger": "vintage:use_coiling_machine"
+      }
+    },
+    "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.coiling_machine.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:spring_coiling_machine"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.coiling_machine"
+    }
+  },
+    "requirements": [
+      [
+        "coiling_machine"
+      ]
+    ]
+  }

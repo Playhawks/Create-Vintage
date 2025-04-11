@@ -1,0 +1,30 @@
+{
+    "parent": "vintage:iron_spring",
+    "criteria": {
+      "lathe": {
+        "conditions": {},
+        "trigger": "vintage:use_lathe"
+      }
+    },
+    "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.lathe.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:lathe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.lathe"
+    }
+  },
+    "requirements": [
+      [
+        "lathe"
+      ]
+    ]
+  }

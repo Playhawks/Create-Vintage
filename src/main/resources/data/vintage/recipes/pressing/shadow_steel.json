@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/shadow_steel"
+    }
+  ],
+  "results": [
+    {
+      "item": "vintage:shadow_steel_sheet"
+    }
+  ]
+}

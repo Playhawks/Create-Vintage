@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "vintage:block/centrifuge/block"
+    }
+  }
+}

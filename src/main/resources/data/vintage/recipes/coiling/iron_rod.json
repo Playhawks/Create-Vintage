@@ -1,0 +1,19 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "828282",
+	"ingredients": [ {
+      "tag": "forge:rods/iron"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:iron_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+	"conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }]
+}

@@ -1,0 +1,22 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "A86C73",
+	"ingredients": [ 
+		{
+			"tag": "forge:rods/ostrum"
+		}
+	],
+	"results": [
+		{
+			"item": "vintage:ostrum_spring",
+			"count": 1
+		}
+	],
+	"processingTime": 120,
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "ad_astra"
+		}	
+	]
+}

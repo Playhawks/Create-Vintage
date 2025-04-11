@@ -1,0 +1,24 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "FAD64A",
+	"ingredients": [ {
+      "tag": "forge:ingots/gold"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:golden_spring",
+			"count": 2
+		}
+	],
+  "processingTime": 120,
+  "conditions": [
+	{
+		"type": "forge:not",
+		"value": {
+			"type": "forge:mod_loaded",
+			"modid": "createaddition"
+		}
+	}
+  ]
+}

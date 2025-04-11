@@ -1,0 +1,14 @@
+{
+	"type":"vintage:turning",
+	"ingredients": [
+		{
+			"tag": "forge:storage_blocks/iron"
+		}
+	],
+	"results": [
+		{
+			"item": "vintage:concave_curving_head",
+			"count": 1
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "type":"createaddition:rolling",
+  "input":
+    {
+      "item": "create:andesite_alloy"
+    },  
+  "result":
+    {
+      "item": "vintage:andesite_rod",
+		"count": 2
+    },  
+  "conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }
+  ]
+}

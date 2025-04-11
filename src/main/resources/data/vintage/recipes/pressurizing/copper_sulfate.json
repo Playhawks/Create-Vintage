@@ -1,0 +1,22 @@
+{
+	"type":"vintage:pressurizing",
+	"ingredients": [ 
+		{
+			"fluid": "vintage:sulfuric_acid",
+			"amount": 200
+		},
+		{
+			"fluid": "minecraft:water",
+			"amount": 200
+		},
+		{
+			"tag": "forge:ingots/copper"
+		}
+	],
+	"results": [
+		{
+			"item": "vintage:copper_sulfate"
+		}
+	],
+	"processingTime": 800
+}

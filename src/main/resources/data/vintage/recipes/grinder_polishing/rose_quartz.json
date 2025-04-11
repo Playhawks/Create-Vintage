@@ -1,0 +1,16 @@
+{
+	"type":"vintage:polishing",
+	"speedLimits": 1,
+	"ingredients": [
+		{
+			"item": "create:rose_quartz"
+		}
+	],
+	"results": [
+		{
+			"item": "create:polished_rose_quartz",
+			"count": 1
+		}
+	],
+	"processingTime": 20
+}

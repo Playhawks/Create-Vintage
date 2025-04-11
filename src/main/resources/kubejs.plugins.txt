@@ -1,0 +1,1 @@
+dev.bluephs.vintage.compat.kubejs.VINTAGEKubeJSPlugin

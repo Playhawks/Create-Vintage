@@ -1,0 +1,24 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "442d4f",
+	"ingredients": [ {
+      "tag": "forge:rods/hepatizon"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:hepatizon_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+  "conditions": [
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/hepatizon"
+      }
+    }
+  ]
+}

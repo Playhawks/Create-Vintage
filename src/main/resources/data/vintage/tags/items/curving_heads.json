@@ -1,0 +1,11 @@
+{
+	"replace": false,
+  "values": [
+    "vintage:convex_curving_head",
+	"vintage:concave_curving_head",
+	"vintage:w_shaped_curving_head",
+	"vintage:v_shaped_curving_head",
+	"minecraft:nether_star",
+	"minecraft:heart_of_the_sea"
+  ]
+}

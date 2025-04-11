@@ -1,0 +1,30 @@
+{
+    "parent": "vintage:root",
+    "criteria": {
+      "belt_grinder": {
+        "conditions": {},
+        "trigger": "vintage:use_belt_grinder"
+      }
+    },
+    "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.belt_grinder.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:belt_grinder"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.belt_grinder"
+    }
+  },
+    "requirements": [
+      [
+        "belt_grinder"
+      ]
+    ]
+  }

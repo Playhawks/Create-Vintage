@@ -1,0 +1,19 @@
+{
+	"type":"vintage:coiling",
+	"springColor": "C15A36",
+	"ingredients": [ {
+      "tag": "forge:rods/copper"
+    }
+  ],
+	"results": [
+		{
+			"item": "vintage:copper_spring",
+			"count": 1
+		}
+	],
+  "processingTime": 120,
+	"conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    }]
+}

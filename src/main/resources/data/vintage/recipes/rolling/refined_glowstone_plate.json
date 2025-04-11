@@ -1,0 +1,24 @@
+{
+  "type":"createaddition:rolling",
+  "input":
+    {
+      "tag": "forge:plates/refined_glowstone"
+    },  
+  "result":
+    {
+      "item": "vintage:refined_glowstone_wire",
+		"count": 2
+    },  
+  "conditions": [ {
+		"type": "forge:mod_loaded",
+		"modid": "createaddition"
+    },
+	{
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/refined_glowstone"
+      }
+    }
+  ]
+}

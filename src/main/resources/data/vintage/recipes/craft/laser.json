@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lasers",
+  "key": {
+    "L": {
+      "item": "vintage:laser_item"
+    },
+	"B": {
+      "item": "create:brass_casing"
+    },
+	"S": {
+      "tag": "vintage:springs/iron"
+    },
+	"C": {
+      "item": "create:cogwheel"
+    },
+	"R": {
+      "tag": "forge:storage_blocks/redstone"
+    },
+	"Q": {
+      "tag": "forge:gems/quartz"
+    },
+	"P": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "pattern": [
+    "CRC",
+    "PBS",
+	"QLQ"
+  ],
+  "result": {
+    "count": 1,
+    "item": "vintage:laser"
+  }
+}

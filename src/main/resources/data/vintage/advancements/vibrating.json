@@ -1,0 +1,30 @@
+{
+    "parent": "vintage:iron_spring",
+    "criteria": {
+      "vibrating_table": {
+        "conditions": {},
+        "trigger": "vintage:use_vibration_table"
+      }
+    },
+    "display": {
+    "announce_to_chat": false,
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.vintage.vibrating.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vintage:vibrating_table"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.vintage.vibrating"
+    }
+  },
+    "requirements": [
+      [
+        "vibrating_table"
+      ]
+    ]
+  }
