@@ -18,6 +18,7 @@ import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
 import dev.latvian.mods.kubejs.recipe.component.FluidComponents;
 import dev.latvian.mods.kubejs.recipe.component.NumberComponent;
+import dev.latvian.mods.kubejs.recipe.component.StringComponent;
 import dev.latvian.mods.kubejs.recipe.component.TimeComponent;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 import dev.latvian.mods.kubejs.util.MapJS;
@@ -34,6 +35,7 @@ public interface HammeringRecipeSchema {
 	RecipeKey<Either<InputFluid, InputItem>[]> INGREDIENTS = FluidComponents.INPUT_OR_ITEM_ARRAY.key("ingredients");
 	RecipeKey<Long> PROCESSING_TIME_REQUIRED = TimeComponent.TICKS.key("processingTime").optional(100L).alwaysWrite();
 	RecipeKey<Integer> HAMMER_BLOWS = NumberComponent.IntRange.INT.key("hammerBlows").optional(1);
+	RecipeKey<String> ANVILBLOCK = StringComponent.ANY.key("anvilBlock").optional("").allowEmpty();
 
 	class ProcessingRecipeJS extends RecipeJS {
 		@Override
@@ -99,7 +101,11 @@ public interface HammeringRecipeSchema {
 				return outputItem;
 			}
 		}
+
+		public RecipeJS anvilBlock(String anvilBlock) {
+			return setValue(ANVILBLOCK, anvilBlock);
+		}
 	}
 
-	RecipeSchema HAMMERING_PROCESSING = new RecipeSchema(ProcessingRecipeJS.class, ProcessingRecipeJS::new, RESULTS, INGREDIENTS, HAMMER_BLOWS);
+	RecipeSchema HAMMERING_PROCESSING = new RecipeSchema(ProcessingRecipeJS.class, ProcessingRecipeJS::new, RESULTS, INGREDIENTS, HAMMER_BLOWS, ANVILBLOCK);
 }

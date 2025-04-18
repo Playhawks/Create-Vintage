@@ -35,6 +35,7 @@ public interface CurvingRecipeSchema {
 	RecipeKey<Either<InputFluid, InputItem>[]> INGREDIENTS = FluidComponents.INPUT_OR_ITEM_ARRAY.key("ingredients");
 	RecipeKey<Integer> MODE = NumberComponent.IntRange.INT.key("mode").optional(1);
 	RecipeKey<String> HEAD = StringComponent.ANY.key("itemAsHead").optional("");
+	RecipeKey<Integer> HEADDAMAGE = NumberComponent.IntRange.INT.key("headDamage").optional(1).allowEmpty();
 
 	class ProcessingRecipeJS extends RecipeJS {
 		@Override
@@ -108,7 +109,8 @@ public interface CurvingRecipeSchema {
 		public RecipeJS head(String head) {
 			return setValue(HEAD, head);
 		}
+		public RecipeJS headDamage(int headDamage) { return setValue(HEADDAMAGE, headDamage); }
 	}
 
-	RecipeSchema CURVING_PROCESSING = new RecipeSchema(ProcessingRecipeJS.class, ProcessingRecipeJS::new, RESULTS, INGREDIENTS, MODE, HEAD);
+	RecipeSchema CURVING_PROCESSING = new RecipeSchema(ProcessingRecipeJS.class, ProcessingRecipeJS::new, RESULTS, INGREDIENTS, MODE, HEAD, HEADDAMAGE);
 }

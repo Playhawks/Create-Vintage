@@ -231,7 +231,7 @@ public class VintageJEI implements IModPlugin {
 		return new CategoryBuilder<>(recipeClass);
 	}
 
-	private class CategoryBuilder<T extends Recipe<?>> {
+	private static class CategoryBuilder<T extends Recipe<?>> {
 		private final Class<? extends T> recipeClass;
 		private Predicate<VCRecipes> predicate = cRecipes -> true;
 
@@ -269,9 +269,8 @@ public class VintageJEI implements IModPlugin {
 					.asItem()));
 		}
 
-		public CategoryBuilder<T> icon(IDrawable icon) {
+		public void icon(IDrawable icon) {
 			this.icon = icon;
-			return this;
 		}
 
 		public CategoryBuilder<T> itemIcon(ItemLike item) {
@@ -284,9 +283,8 @@ public class VintageJEI implements IModPlugin {
 			return this;
 		}
 
-		public CategoryBuilder<T> background(IDrawable background) {
+		public void background(IDrawable background) {
 			this.background = background;
-			return this;
 		}
 
 		public CategoryBuilder<T> emptyBackground(int width, int height) {
@@ -320,14 +318,13 @@ public class VintageJEI implements IModPlugin {
 					return recipes;
 				};
 			} else {
-				recipesSupplier = () -> Collections.emptyList();
+				recipesSupplier = Collections::emptyList;
 			}
 
 			CreateRecipeCategory.Info<T> info = new CreateRecipeCategory.Info<>(
 					new mezz.jei.api.recipe.RecipeType<>(Vintage.asResource(name), recipeClass),
 					Component.translatable(Vintage.MOD_ID + ".recipe." + name), background, icon, recipesSupplier, catalysts);
-			CreateRecipeCategory<T> category = factory.create(info);
-			return category;
+            return factory.create(info);
 		}
 	}
 }
