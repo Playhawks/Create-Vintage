@@ -248,6 +248,10 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 
 		if (getBasins() < 4)
 			return;
+		for (int i = 0; i < outputInv.getSlots(); i++)
+			if (outputInv.getStackInSlot(i)
+					.getCount() == outputInv.getSlotLimit(i))
+				return;
 
 		if (timer > 0) {
 			if (getSpeed() == 0) {
