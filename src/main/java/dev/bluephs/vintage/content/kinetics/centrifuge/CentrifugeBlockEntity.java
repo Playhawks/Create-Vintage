@@ -77,6 +77,8 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 	LerpedFloat ingredientRotation;
 	VintageAdvancementBehaviour advancementBehaviour;
 
+	private final CompoundTag cpt = new CompoundTag();
+
 	public CentrifugeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
 
@@ -151,7 +153,7 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 		if (!clientPacket)
 			return;
 
-		NBTHelper.iterateCompoundList(compound.getList("VisualizedItems", Tag.TAG_COMPOUND),
+		NBTHelper.iterateCompoundList(cpt.getList("VisualizedItems", Tag.TAG_COMPOUND),
 				c -> visualizedOutputItems.add(IntAttached.with(OUTPUT_ANIMATION_TIME, ItemStack.of(c))));
 	}
 
@@ -168,7 +170,7 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 		if (!clientPacket)
 			return;
 
-		compound.put("VisualizedItems", NBTHelper.writeCompoundList(visualizedOutputItems, ia -> ia.getValue()
+		cpt.put("VisualizedItems", NBTHelper.writeCompoundList(visualizedOutputItems, ia -> ia.getValue()
 				.serializeNBT()));
 		visualizedOutputItems.clear();
 	}
@@ -190,7 +192,7 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 	}
 
 	private List<Recipe<?>> getRecipes() {
-		List<Recipe<?>> list =  RecipeFinder.get(centrifugationRecipesKey, level, this::matchStaticFilters);
+		List<Recipe<?>> list = RecipeFinder.get(centrifugationRecipesKey, level, this::matchStaticFilters);
 
 		return list.stream()
 				.filter(this::matchCentrifugeRecipe)
@@ -226,7 +228,13 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 				return false;
 		}
 
-		return CentrifugationRecipe.match(this, recipes.get(0));
+		if (recipes.get(0) instanceof CentrifugationRecipe centrifugationRecipe) {
+			boolean res = this.acceptOutputs(centrifugationRecipe.getRollableResultsAsItemStacks(), centrifugationRecipe.getFluidResults(), true);
+			if (!res)
+				return false;
+			return CentrifugationRecipe.match(this, centrifugationRecipe);
+		}
+		return false;
 	}
 
 	@Override
@@ -240,10 +248,6 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 
 		if (getBasins() < 4)
 			return;
-		for (int i = 0; i < outputInv.getSlots(); i++)
-			if (outputInv.getStackInSlot(i)
-					.getCount() == outputInv.getSlotLimit(i))
-				return;
 
 		if (timer > 0) {
 			if (getSpeed() == 0) {
@@ -308,8 +312,9 @@ public class CentrifugeBlockEntity extends KineticBlockEntity implements IHaveGo
 
 			lastRecipeIsAssembly = false;
 
-			if (!getRecipes().isEmpty()) {
-				lastRecipe = (CentrifugationRecipe) getRecipes().get(0);
+			List<Recipe<?>> recipes = getRecipes();
+			if (!recipes.isEmpty()) {
+				lastRecipe = (CentrifugationRecipe) recipes.get(0);
 				timer = lastRecipe.getProcessingDuration();
 				sendData();
 				return;

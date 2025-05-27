@@ -34,3 +34,17 @@ license="${mod_license}"
     versionRange="[6.0.4, )"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="kubejs"
+    mandatory=false
+    versionRange="[2001.6.5-build.16, )"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="kubejs_create"
+    mandatory=false
+    versionRange="[2001.3.0-build.8, )"
+    ordering="NONE"
+    side="BOTH"
